@@ -16,7 +16,7 @@ function App() {
       <Navbar onOpenAuth={() => setAuthOpen(true)} />
       <Hero onOpenAuth={() => setAuthOpen(true)} />
       <Brands />
-      <Services onOpenAuth={handleOpenAuth} />
+      <Services />
       <HowItWorks />
       <Testimonials />
       <Footer />
