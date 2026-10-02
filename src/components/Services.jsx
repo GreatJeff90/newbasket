@@ -1,9 +1,9 @@
 export default function Services() {
   const services = [
     {
-      title: "Easy Transaction",
+      title: "Instant Settlements",
       description:
-        "We perform diligence guarantee the best financing and financial plan your dept anywhere.",
+        "Receive and disburse funds seamlessly across local and international payment channels with real-time balance tracking.",
       bg: "bg-[#FDF09B]", // soft pastel yellow
       icon: (
         <svg className="w-5 h-5 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -13,9 +13,9 @@ export default function Services() {
       ),
     },
     {
-      title: "Convert Currency",
+      title: "Multi-Currency Exchange",
       description:
-        "We perform diligence guarantee the best financing and financial plan your dept anywhere.",
+        "Convert balances at transparent, competitive rates without hidden exchange fees or international transaction bottlenecks.",
       bg: "bg-[#C4C4FD]", // soft lavender / periwinkle
       icon: (
         <svg className="w-5 h-5 text-black fill-current" viewBox="0 0 24 24">
@@ -24,9 +24,9 @@ export default function Services() {
       ),
     },
     {
-      title: "Advanced Security",
+      title: "Enterprise Security",
       description:
-        "We perform diligence guarantee the best financing and financial plan your dept anywhere.",
+        "Bank-grade encryption, automated anti-fraud monitoring, and multi-factor authorization keep every transaction protected.",
       bg: "bg-[#FBD4C0]", // soft pastel peach
       icon: (
         <svg className="w-5 h-5 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -43,7 +43,7 @@ export default function Services() {
         
         {/* Section Heading */}
         <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 text-center tracking-tight max-w-2xl mx-auto leading-tight">
-          Unleash the true potential for next gen banking.
+          Everything you need for next-generation payments.
         </h2>
 
         {/* 3-Column Service Cards */}

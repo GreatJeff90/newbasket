@@ -5,22 +5,20 @@ export default function Hero() {
         
         {/* Main Headline */}
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1]">
-          Your Intelligent <br className="hidden sm:inline" />
-          Partner, On Demand
+          Your Smart Commerce Partner<br className="hidden sm:inline" />
+          <span className="text-orange-500">Powered by AI</span>
         </h1>
 
         {/* Subtitle */}
         <p className="mx-auto mt-6 max-w-2xl text-base sm:text-lg leading-relaxed text-slate-500 font-normal">
-          Streamline tasks, make smarter decisions, and stay one step ahead. Our
-          AI agent works quietly in the background—so you can focus on what
-          matters most.
+          Streamline multi-channel payments, eliminate transaction drag, and manage payouts in one unified hub. New Basket powers your business seamlessly in the background so you can scale what matters.
         </p>
 
         {/* Call To Action Button */}
         <div className="mt-8 flex justify-center">
           <a
             href="#try-free"
-            className="group inline-flex items-center gap-3 rounded-full bg-black py-2.5 pl-6 pr-2.5 text-sm font-medium text-white transition-all duration-200 hover:bg-slate-800"
+            className="group inline-flex items-center gap-3 rounded-full bg-black py-2.5 pl-6 pr-2.5 text-sm font-medium text-white transition-all duration-200 hover:bg-orange-500"
           >
             <span>Try It Free</span>
             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black transition-transform duration-200 group-hover:translate-x-0.5">

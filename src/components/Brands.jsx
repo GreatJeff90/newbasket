@@ -68,7 +68,7 @@ export default function Brands() {
         
         {/* Subtitle / Header */}
         <p className="text-center font-mono text-xs sm:text-sm tracking-wider text-slate-500 uppercase">
-          40+ partner have put their trust in us
+          Over 40+ high-growth brands and platforms trust New Basket
         </p>
 
         {/* Brand Logos Row */}

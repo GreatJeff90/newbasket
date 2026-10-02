@@ -1,82 +1,85 @@
 export default function HowItWorks() {
   const steps = [
     {
-      title: "Multi-channel payment",
+      title: "Build Your Community",
       description:
-        "Allows you to pay online at all applications and websites that accept MasterCard cards.",
+        "Create dedicated spaces for your customers, post products, share services, and engage directly in interactive chat threads.",
       actionText: "Next",
       stepIndex: 0,
       icon: (
         <div className="relative flex items-center justify-center w-36 h-28">
-          {/* Card */}
-          <div className="absolute right-2 top-2 w-20 h-13 rounded-lg border-2 border-slate-900 bg-white shadow-xs p-1.5 flex flex-col justify-between -rotate-12">
-            <div className="h-2 w-full bg-slate-900 rounded-xs" />
-            <div className="flex gap-1 items-center self-end">
-              <span className="w-2.5 h-2.5 rounded-full border border-slate-900" />
-              <span className="w-2.5 h-2.5 rounded-full border border-slate-900 -ml-1.5" />
+          {/* Community Chat Bubble */}
+          <div className="w-24 h-18 rounded-2xl border-2 border-slate-900 bg-white p-2.5 flex flex-col justify-between shadow-xs">
+            <div className="flex items-center gap-1.5">
+              <span className="w-2.5 h-2.5 rounded-full bg-orange-500" />
+              <div className="h-1.5 w-10 bg-slate-200 rounded-full" />
+            </div>
+            <div className="space-y-1">
+              <div className="h-1.5 w-full bg-slate-900 rounded-full" />
+              <div className="h-1.5 w-3/4 bg-slate-300 rounded-full" />
             </div>
           </div>
-          {/* Channel icons */}
-          <div className="absolute left-3 top-3 font-black text-sm tracking-tight text-slate-900">
-            a<span className="text-[10px] block -mt-1 font-normal">⌣</span>
+          {/* Floating Product Tag Badge */}
+          <div className="absolute -right-1 -top-1 px-2 py-0.5 rounded-full border-2 border-slate-900 bg-white text-[10px] font-bold text-slate-900 shadow-xs flex items-center gap-1">
+            <span className="w-1.5 h-1.5 rounded-full bg-orange-500" />
+            Shop
           </div>
-          <div className="absolute left-2 bottom-3 px-1.5 py-0.5 rounded-md border-2 border-slate-900 font-bold text-xs text-slate-900">
-            N
+          {/* Member avatars */}
+          <div className="absolute -left-2 -bottom-1 flex -space-x-1.5">
+            <div className="w-6 h-6 rounded-full border-2 border-slate-900 bg-white flex items-center justify-center text-[9px] font-black">1</div>
+            <div className="w-6 h-6 rounded-full border-2 border-slate-900 bg-white flex items-center justify-center text-[9px] font-black">2</div>
           </div>
-          {/* Motion lines */}
-          <div className="absolute left-11 top-6 w-5 h-0.5 bg-slate-900 rotate-12" />
-          <div className="absolute left-14 bottom-5 w-5 h-0.5 bg-slate-900 rotate-12" />
         </div>
       ),
     },
     {
-      title: "All free",
+      title: "In-Chat Payments & Bookings",
       description:
-        "Deposits and payments are completely free. No issuance fee, annual fee.",
+        "Close deals without redirecting customers. Accept payments and book appointments directly inside your conversation flow.",
       actionText: "Next",
       stepIndex: 1,
       icon: (
-        <div className="flex items-center justify-center gap-3 w-36 h-28">
-          {/* Vertical card */}
-          <div className="w-10 h-16 rounded-lg border-2 border-slate-900 bg-white p-1 flex flex-col justify-between items-center">
-            <div className="w-1.5 h-1.5 rounded-full bg-slate-900" />
-            <div className="w-5 h-2.5 border-t border-b border-slate-900" />
+        <div className="relative flex items-center justify-center w-36 h-28">
+          {/* Phone Frame */}
+          <div className="w-20 h-24 rounded-2xl border-2 border-slate-900 bg-white p-1.5 flex flex-col justify-between shadow-xs">
+            <div className="w-6 h-1 rounded-full bg-slate-900 mx-auto" />
+            {/* Payment Bubble */}
+            <div className="rounded-lg border border-slate-900 bg-orange-50 p-1 flex flex-col items-center">
+              <span className="text-[10px] font-extrabold text-slate-900">Paid $45</span>
+              <span className="text-[8px] text-orange-600 font-bold">✓ Confirmed</span>
+            </div>
+            <div className="w-4 h-1 rounded-full bg-slate-300 mx-auto" />
           </div>
-          {/* Piggy bank */}
-          <div className="relative w-16 h-14 border-2 border-slate-900 rounded-3xl flex items-center justify-center bg-white">
-            <div className="absolute -top-1 w-4 h-1 bg-slate-900 rounded-full" />
-            <div className="w-1.5 h-1.5 rounded-full bg-slate-900 mr-5" />
-            {/* Feet */}
-            <div className="absolute -bottom-1 left-3 w-2 h-1.5 bg-slate-900" />
-            <div className="absolute -bottom-1 right-3 w-2 h-1.5 bg-slate-900" />
-            {/* Snout */}
-            <div className="absolute -right-2 top-4 w-2.5 h-4 border-2 border-slate-900 rounded-r-md bg-white" />
+          {/* Floating Currency Coin */}
+          <div className="absolute -right-2 top-3 w-8 h-8 rounded-full border-2 border-slate-900 bg-white flex items-center justify-center font-black text-xs text-orange-500 shadow-xs">
+            $
           </div>
         </div>
       ),
     },
     {
-      title: "Security",
+      title: "Currencies & Shipping Sorted",
       description:
-        "Two-Factor Authentication: OTP authentication code and MSC security code.",
+        "Choose preferred settlement currencies, agree on delivery terms, and generate dispatch labels—all in one place.",
       actionText: "Start",
       stepIndex: 2,
       icon: (
         <div className="relative flex items-center justify-center w-36 h-28">
-          {/* Encircling stroke */}
-          <div className="w-24 h-24 rounded-full border-2 border-slate-900 flex items-center justify-center relative">
-            {/* Shield */}
-            <div className="absolute -left-3 top-6 w-9 h-11 border-2 border-slate-900 bg-white rounded-b-2xl rounded-t-sm flex items-center justify-center shadow-xs">
-              <div className="w-4 h-5 border-l-2 border-b-2 border-slate-900 rotate-45 mb-1" />
+          {/* Shipping Package */}
+          <div className="w-18 h-16 rounded-xl border-2 border-slate-900 bg-white p-1.5 flex flex-col justify-between shadow-xs relative">
+            <div className="w-full h-0.5 bg-slate-900 absolute top-4 left-0" />
+            <div className="w-4 h-5 border border-slate-900 rounded-xs self-end mt-4 mr-1 flex flex-col justify-around p-0.5">
+              <div className="h-0.5 w-full bg-slate-900" />
+              <div className="h-0.5 w-full bg-slate-900" />
             </div>
-            {/* Security card */}
-            <div className="w-18 h-12 rounded-lg border-2 border-slate-900 bg-white p-1.5 flex flex-col justify-between ml-4">
-              <div className="h-2 w-full bg-slate-900 rounded-xs" />
-              <div className="flex gap-1 items-center self-end">
-                <span className="w-2 h-2 rounded-full border border-slate-900" />
-                <span className="w-2 h-2 rounded-full border border-slate-900 -ml-1" />
-              </div>
-            </div>
+          </div>
+          {/* Multi-Currency Badges */}
+          <div className="absolute -left-1 top-2 px-1.5 py-0.5 rounded-md border-2 border-slate-900 bg-white text-[9px] font-bold text-slate-900 shadow-xs">
+            USD / NGN
+          </div>
+          {/* Delivery Truck Badge */}
+          <div className="absolute -right-2 -bottom-1 w-9 h-7 rounded-lg border-2 border-slate-900 bg-orange-50 flex items-center justify-center text-[10px] font-black text-slate-900 shadow-xs">
+            🚚
           </div>
         </div>
       ),
@@ -89,6 +92,9 @@ export default function HowItWorks() {
         
         {/* Header */}
         <div className="text-center mb-16">
+          <p className="text-xs uppercase tracking-widest font-semibold text-orange-500 mb-2">
+            Seamless Commerce
+          </p>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
             How It Works
           </h2>
@@ -125,7 +131,7 @@ export default function HowItWorks() {
                       key={i}
                       className={`h-1.5 rounded-full transition-all duration-200 ${
                         step.stepIndex === i
-                          ? "w-4 bg-slate-900"
+                          ? "w-4 bg-orange-500"
                           : "w-1.5 bg-slate-300"
                       }`}
                     />
@@ -135,7 +141,7 @@ export default function HowItWorks() {
                 {/* Next / Start Button */}
                 <button
                   type="button"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 hover:text-orange-500 transition-colors"
+                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 hover:text-orange-500 transition-colors cursor-pointer"
                 >
                   <span>{step.actionText}</span>
                   <svg
