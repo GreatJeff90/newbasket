@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function Navbar() {
+export default function Navbar({ onOpenAuth }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
@@ -10,6 +10,13 @@ export default function Navbar() {
     { name: 'Testimonials', href: '#testimonials' },
   ];
 
+  const handleAuthClick = (mode) => {
+    setMobileMenuOpen(false);
+    if (onOpenAuth) {
+      onOpenAuth(mode);
+    }
+  };
+
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur border-b border-orange-100 shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,7 +25,6 @@ export default function Navbar() {
           {/* Logo: Basketball Icon + Wordmark */}
           <a href="#" className="flex items-center gap-2.5 group">
             <span className="flex items-center justify-center w-10 h-10 rounded-full bg-orange-500 text-white shadow-md shadow-orange-500/25 transition-transform duration-200 group-hover:scale-105">
-              {/* Custom SVG Basketball */}
               <svg 
                 className="w-6 h-6 stroke-white stroke-[1.8] fill-none" 
                 viewBox="0 0 24 24"
@@ -53,20 +59,22 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Action / Auth Buttons */}
+          {/* Desktop Action / Auth Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <a
-              href="#login"
-              className="text-sm font-semibold text-slate-700 hover:text-orange-500 px-3 py-2 transition-colors duration-150"
+            <button
+              type="button"
+              onClick={() => handleAuthClick('login')}
+              className="text-sm font-semibold text-slate-700 hover:text-orange-500 px-3 py-2 transition-colors duration-150 cursor-pointer"
             >
               Log In
-            </a>
-            <a
-              href="#signup"
-              className="text-sm font-semibold text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-lg shadow-sm shadow-orange-500/30 transition-all duration-150 hover:shadow-orange-500/40"
+            </button>
+            <button
+              type="button"
+              onClick={() => handleAuthClick('signup')}
+              className="text-sm font-semibold text-white bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-lg shadow-sm shadow-orange-500/30 transition-all duration-150 hover:shadow-orange-500/40 cursor-pointer"
             >
               Get Started
-            </a>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -104,20 +112,20 @@ export default function Navbar() {
             </a>
           ))}
           <div className="pt-3 border-t border-slate-100 flex flex-col gap-2">
-            <a
-              href="#login"
-              onClick={() => setMobileMenuOpen(false)}
-              className="w-full text-center py-2 text-sm font-semibold text-slate-700 hover:bg-orange-50 hover:text-orange-500 rounded-lg transition-colors"
+            <button
+              type="button"
+              onClick={() => handleAuthClick('login')}
+              className="w-full text-center py-2 text-sm font-semibold text-slate-700 hover:bg-orange-50 hover:text-orange-500 rounded-lg transition-colors cursor-pointer"
             >
               Log In
-            </a>
-            <a
-              href="#signup"
-              onClick={() => setMobileMenuOpen(false)}
-              className="w-full text-center py-2 text-sm font-semibold text-white bg-orange-500 hover:bg-orange-600 rounded-lg shadow-sm transition-colors"
+            </button>
+            <button
+              type="button"
+              onClick={() => handleAuthClick('signup')}
+              className="w-full text-center py-2 text-sm font-semibold text-white bg-orange-500 hover:bg-orange-600 rounded-lg shadow-sm transition-colors cursor-pointer"
             >
               Get Started
-            </a>
+            </button>
           </div>
         </div>
       )}
