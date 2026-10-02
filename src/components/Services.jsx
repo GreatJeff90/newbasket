@@ -1,4 +1,4 @@
-export default function Services() {
+export default function Services({ onOpenAuth }) {
   const services = [
     {
       title: "Instant Settlements",
@@ -72,12 +72,13 @@ export default function Services() {
 
               {/* Action Button */}
               <div className="mt-10">
-                <a
-                  href="#learn-more"
-                  className="inline-block bg-black text-white text-xs font-semibold px-6 py-2.5 rounded-full hover:bg-slate-800 transition-colors"
+                <button
+                  type="button"
+                  onClick={() => onOpenAuth && onOpenAuth('signup')}
+                  className="inline-block bg-black text-white text-xs font-semibold px-6 py-2.5 rounded-full hover:bg-slate-800 transition-colors cursor-pointer"
                 >
                   Learn More
-                </a>
+                </button>
               </div>
             </div>
           ))}

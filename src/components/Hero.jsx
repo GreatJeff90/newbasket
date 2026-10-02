@@ -1,11 +1,11 @@
-export default function Hero() {
+export default function Hero({ onOpenAuth }) {
   return (
     <section className="relative overflow-hidden bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-4xl px-6 text-center">
         
         {/* Main Headline */}
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-slate-900 leading-[1.1]">
-          Your Smart Commerce Partner<br className="hidden sm:inline" />
+          Your Smart Commerce Partner<br className="hidden sm:inline" />{" "}
           <span className="text-orange-500">Powered by AI</span>
         </h1>
 
@@ -16,9 +16,10 @@ export default function Hero() {
 
         {/* Call To Action Button */}
         <div className="mt-8 flex justify-center">
-          <a
-            href="#try-free"
-            className="group inline-flex items-center gap-3 rounded-full bg-black py-2.5 pl-6 pr-2.5 text-sm font-medium text-white transition-all duration-200 hover:bg-orange-500"
+          <button
+            type="button"
+            onClick={() => onOpenAuth && onOpenAuth('signup')}
+            className="group inline-flex items-center gap-3 rounded-full bg-black py-2.5 pl-6 pr-2.5 text-sm font-medium text-white transition-all duration-200 hover:bg-orange-500 cursor-pointer"
           >
             <span>Try It Free</span>
             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black transition-transform duration-200 group-hover:translate-x-0.5">
@@ -36,7 +37,7 @@ export default function Hero() {
                 />
               </svg>
             </span>
-          </a>
+          </button>
         </div>
 
       </div>
