@@ -8,11 +8,12 @@ import HowItWorks from './components/HowItWorks';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import AuthModal from './components/AuthModal';
+import Dashboard from './components/Dashboard';
 
 function App() {
   const [session, setSession] = useState(null);
   const [authOpen, setAuthOpen] = useState(false);
-  const [authView, setAuthView] = useState('signup'); // 'signup' | 'login' | 'forgot'
+  const [authView, setAuthView] = useState('signup');
 
   useEffect(() => {
     // 1. Fetch current active session on mount
@@ -20,7 +21,7 @@ function App() {
       setSession(session);
     });
 
-    // 2. Subscribe to auth state updates (sign in, sign out, token refresh)
+    // 2. Subscribe to auth state changes
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
@@ -37,8 +38,15 @@ function App() {
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
+    setSession(null);
   };
 
+  // If user is authenticated, show the merchant dashboard
+  if (session?.user) {
+    return <Dashboard user={session.user} onLogout={handleLogout} />;
+  }
+
+  // Otherwise, show the public landing page
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <Navbar
@@ -48,12 +56,11 @@ function App() {
       />
       <Hero onOpenAuth={handleOpenAuth} />
       <Brands />
-      <Services />
+      <Services onOpenAuth={handleOpenAuth} />
       <HowItWorks />
       <Testimonials />
       <Footer />
 
-      {/* Authentication Modal with Supabase Integration */}
       <AuthModal
         isOpen={authOpen}
         initialView={authView}
